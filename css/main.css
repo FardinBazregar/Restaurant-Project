@@ -1,0 +1,357 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.card-img, .card-overlay, .hamburger-menu .menu {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  position: relative;
+  z-index: 200;
+}
+.navbar-navigation {
+  display: flex;
+}
+.navbar-navigation-left {
+  width: 50vw;
+  height: 100vh;
+  background-color: #262626;
+  position: fixed;
+  left: -50vw;
+  transition: left 0.7s;
+}
+.navbar-navigation-left .left-img {
+  width: 50%;
+  position: absolute;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.4);
+  opacity: 0.6;
+  border-radius: 10px;
+}
+.navbar-navigation-left .left-img-1 {
+  top: 10%;
+  left: 15%;
+}
+.navbar-navigation-left .left-img-2 {
+  top: 40%;
+  left: 25%;
+}
+.navbar-navigation-left .left-img-3 {
+  top: 70%;
+  left: 35%;
+}
+.navbar-navigation-right {
+  width: 50vw;
+  height: 100vh;
+  background-color: #1f1d1d;
+  position: fixed;
+  right: -50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.7s;
+}
+.navbar-navigation .nav-list-item {
+  list-style: none;
+}
+.navbar-navigation .nav-list-link {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 40px;
+  color: #bbb;
+  text-decoration: none;
+  display: block;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.5s;
+}
+.navbar-navigation .nav-list-link:hover {
+  color: #d3ab55;
+  letter-spacing: 3px;
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-left {
+  left: 0;
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-right {
+  right: 0;
+}
+
+.checkbox:checked ~ .hamburger-menu .menu {
+  transform: rotate(90deg);
+}
+
+.checkbox:checked ~ .hamburger-menu .menu .menu-line-1 {
+  transform: rotate(-40deg);
+}
+
+.checkbox:checked ~ .hamburger-menu .menu .menu-line-2 {
+  opacity: 0;
+}
+
+.checkbox:checked ~ .hamburger-menu .menu .menu-line-3 {
+  transform: rotate(40deg);
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/bg.jpeg);
+  background-size: cover;
+  position: relative;
+}
+.header-banner {
+  text-align: center;
+  padding-top: 45vh;
+}
+.header-banner .main-heading {
+  font-size: 100px;
+  color: #262626;
+  padding-bottom: 59px;
+}
+.header-banner .main-heading:hover {
+  color: brown;
+}
+.header-banner .sub-heading {
+  padding-bottom: 35px;
+  font-style: italic;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: aliceblue;
+}
+.header-banner .sub-heading:hover {
+  color: #262626;
+}
+.header-banner .main-btn {
+  border-radius: 35%;
+  font-size: 25px;
+  width: 150px;
+  height: 75px;
+  background-color: transparent;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.header-banner .main-btn:hover {
+  background-color: #d3ab55;
+  color: #000;
+  font-size: 30px;
+  transition: all 3s;
+  border-style: double;
+}
+
+.main-name {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+  color: #000;
+  font-size: 80px;
+}
+@media (max-width: 1100px) {
+  .main-name {
+    font-size: 40px;
+  }
+}
+@media (max-width: 800px) {
+  .main-name {
+    font-size: 35px;
+  }
+}
+@media (max-width: 600px) {
+  .main-name {
+    font-size: 25px;
+  }
+}
+@media (max-width: 520px) {
+  .main-name {
+    font-size: 18px;
+  }
+}
+.main-name:hover {
+  color: antiquewhite;
+  cursor: grab;
+}
+
+.sub-name {
+  text-align: center;
+  font-size: 35px;
+  color: bisque;
+}
+@media (max-width: 1100px) {
+  .sub-name {
+    font-size: 30px;
+  }
+}
+@media (max-width: 800) {
+  .sub-name {
+    font-size: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .sub-name {
+    font-size: 15px;
+  }
+}
+.sub-name:hover {
+  color: #000;
+  cursor: grab;
+}
+
+.about-us {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+}
+.about-us-left {
+  width: 40%;
+}
+.about-us-left img {
+  width: 100%;
+  opacity: 0.8%;
+}
+.about-us-right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px;
+  box-sizing: border-box;
+}
+.about-us-right .main-heading {
+  font-size: 60px;
+  padding-bottom: 450px;
+}
+.about-us .description {
+  font-size: 25px;
+  margin-bottom: 90px;
+}
+.about-us .main-button {
+  align-items: center;
+  margin-right: 85px;
+  margin-top: 150px;
+  border-radius: 45%;
+  font-size: 20px;
+  background-color: rgb(241, 231, 231);
+  color: black;
+  width: 1000px;
+  height: 100px;
+  border: none;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.about-us .main-button:hover {
+  font-size: 35px;
+  transition: all 1.5s;
+  cursor: pointer;
+}
+
+.gallery .cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hamburger-menu {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 10%;
+  right: 5%;
+  z-index: 300;
+}
+.hamburger-menu .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  transition: transform 0.5s0;
+}
+.hamburger-menu .menu-line {
+  width: 100%;
+  height: 5px;
+  background-color: #d3ab55;
+  transition: all 0.5s 0.5s;
+  transform-origin: right;
+}
+
+.card {
+  width: 33.3%;
+  height: 30vw;
+  position: relative;
+  overflow: hidden;
+}
+.card:hover .card-overlay {
+  left: 0;
+}
+.card-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  color: white;
+  background-color: rgba(211, 171, 85, 0.6);
+  z-index: 20;
+  flex-direction: column;
+  transition: left 0.5s;
+}
+.card-overlay-heading {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 50px;
+}
+.card-overlay-paragraph {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.card-overlay-btn {
+  width: 100px;
+  height: 40px;
+  color: rgb(80, 62, 62);
+  background-color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  border: 1px solid;
+}
+.card-img {
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+@media (max-width: 1600px) {
+  .main-heading {
+    font-size: 80px;
+  }
+}
+@media (max-width: 1000px) {
+  .main-heading {
+    font-size: 60px;
+  }
+}
+@media (max-width: 500px) {
+  .main-heading {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .sub-heading {
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 1000px) {
+  .sub-heading {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 500px) {
+  .sub-heading {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=main.css.map */
